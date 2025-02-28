@@ -1,5 +1,14 @@
 import os
+import shutil
+import zipfile
 
+def unzip_folder(zip_path, output_folder):
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(output_folder)
+        
+def zip_folder(folder_path, output_zip):
+    shutil.make_archive(output_zip, 'zip', folder_path)
+        
 def push_folder_to_github(local_dir, repo_url, commit_message="Updated folder",email='atom08072004@gmail.com',name='Khoawawa'):
     """
     Pushes a specific folder to GitHub from Google Colab.
