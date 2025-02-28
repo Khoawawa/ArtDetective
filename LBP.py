@@ -6,11 +6,17 @@ from skimage.feature import local_binary_pattern
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
+class LBP():
+    def __init__(self,P=8,R=1):
+        self.point = P
+        self.radius = R
+        
 class LBP_XG_Model():
-    def extract_LBP_feature(image, P=8,R=1):
-        lbp = local_binary_pattern(image,P,R,'uniform')
+    def __init__(self,P,R):
+        self.lbp = LBP(P,R)
+    def extract_LBP_feature(self,image):
+        lbp = local_binary_pattern(image,self.lbp.P,self.lbp.R,'uniform')
         lbp_hist, _ = np.histogram(lbp.ravel(), bins=np.arange(257), density=True)  
-
         return lbp_hist
 # class Hog():
   
