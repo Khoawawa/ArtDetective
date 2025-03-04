@@ -6,7 +6,7 @@ from sklearn.datasets import load_digits
 from skimage.feature import local_binary_pattern
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-
+from typing import Tuple
 class LBP():
     def __init__(self,P=8,R=1):
         self.point = P
@@ -20,10 +20,10 @@ class LBP():
     
 class XG():
     def __init__(self):
-        self.model: xgb.XGBClassifier  = xgb.XGBClassifier()
+        self.model: xgb.XGBClassifier  = xgb.XGBClassifier(verbosity = 1)
         
-    def fit(self,X_train,y_train):
-        self.model.fit(X_train,y_train)
+    def fit(self,X_train,y_train,eval_set:list[Tuple]):
+        self.model.fit(X_train,y_train,eval_set=eval_set, verbose= True)
         
     def predict(self,X):
         return self.model.predict(X)
