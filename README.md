@@ -27,11 +27,26 @@ FACULTY OF COMPUTER SCIENCE AND ENGINEERING
 
 ## Introduction to Problem
 The rapid advancement of generative models like GANs and diffusion models has made it difficult to distinguish real images from AI-generated ones. This poses challenges in areas such as misinformation and digital trust. Our project aims to develop an AI detector that can accurately classify images as real or synthetic, helping to promote authenticity in digital media.
-## Dataset and Data Preprocessing
-### Dataset
-We use the dataset from [Kaggle](https://www.kaggle.com/datasets/alessandrasala79/ai-vs-human-generated-dataset), which contains both AI-generated and real human-created images.
+## Data Analysis
+In this section, we analyze the dataset to better understand its structure and quality. A thorough analysis helps in identifying potential issues and guides preprocessing and modeling strategies.
 
-## A B C 
+The following key aspects are covered:
+* **File Integrity**: Check for missing values and ensure all referenced image files exist.
+* **Dataset Properties**: Study basic attributes such as image dimensions, file count, and formats.
+* **Class Balance**: Examine the distribution between real and AI-generated images to ensure a balanced dataset.
+* **Pairing Violations Check**: Verify if image pairs are correctly paired according to the expected labels.
+* **Pair Completeness Check**: Ensure every pair should have exactly 2 images.
+* **Visual and Metadata Analysis**: Explore metadata like image size and visually inspect sample images.
+* **Pixel Intensity Distribution**: Compare pixel value distributions across the classes to understand visual differences.
 
-## Evaluation
+For a detailed breakdown, refer to the Analysis.ipynb notebook — you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence.
+## XGBoost
+In this section, we apply the **XGBoost** algorithm — a powerful and efficient gradient boosting framework — to classify images as either real (human-generated) or AI-generated based on extracted features.
 
+For a detailed breakdown, refer to the XGBoostTraining.ipynb notebook - you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence.
+## ResNet
+In this section, we apply the **ResNet** (Residual Network) architecture — a deep convolutional neural network with residual connections — to classify images as either real (human-generated) or AI-generated. By fine-tuning a pre-trained ResNet model, we adapt it to our binary classification task and leverage its powerful feature extraction capabilities.
+
+For a detailed breakdown, refer to the ResNetTraining.ipynb notebook — you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence.
+## Models Evaluation
+## Conclusion
