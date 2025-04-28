@@ -39,15 +39,15 @@ The following key aspects are covered:
 * **Visual and Metadata Analysis**: Explore metadata like image size and visually inspect sample images.
 * **Pixel Intensity Distribution**: Compare pixel value distributions across the classes to understand visual differences.
 
-For a detailed breakdown, refer to the Analysis.ipynb notebook — you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence.
+For a detailed breakdown, refer to the `Analysis.ipynb` notebook — you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence. Since this notebook is implemented on Google Colab, the best way to run it is by opening it directly on Colab and executing the cells.
 ## XGBoost
 In this section, we apply the **XGBoost** algorithm — a powerful and efficient gradient boosting framework — to classify images as either real (human-generated) or AI-generated based on extracted features.
 
-For a detailed breakdown, refer to the XGBoostTraining.ipynb notebook - you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence. Since this notebook is implemented on Google Colab, the best way to run it is by opening it directly on Colab and executing the cells.
+For a detailed breakdown, refer to the `XGBoostTraining`.ipynb notebook - you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence. Since this notebook is implemented on Google Colab, the best way to run it is by opening it directly on Colab and executing the cells.
 ## ResNet
 In this section, we apply the **ResNet** (Residual Network) architecture — a deep convolutional neural network with residual connections — to classify images as either real (human-generated) or AI-generated. By fine-tuning a pre-trained ResNet model, we adapt it to our binary classification task and leverage its powerful feature extraction capabilities.
 
-For a detailed breakdown, refer to the CNN.ipynb notebook — you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence. Since this notebook is implemented on Google Colab, the best way to run it is by opening it directly on Colab and executing the cells.
+For a detailed breakdown, refer to the `CNN.ipynb` notebook — you can find the file in this folder. To run this notebook, simply open the file and execute the cells in sequence. Since this notebook is implemented on Google Colab, the best way to run it is by opening it directly on Colab and executing the cells.
 
 ## Models Evaluation
 In this section, after applying both the **XGBoost** method and the **ResNet** method to detect real and AI-generated images, we will perform evaluation and comparison between the two models to determine which one performs better.
